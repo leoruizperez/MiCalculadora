@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:hint="numero 1"
+        android:hint="@string/number_1"
         />
 
     <EditText
@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:hint="numero 2"
+        android:hint="@string/number_2"
         />
 
 
@@ -34,28 +34,28 @@
             android:id="@+id/sumar"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:text="+"
+            android:text="@string/plus"
             android:textSize="50sp"
             />
         <Button
             android:id="@+id/restar"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:text="-"
+            android:text="@string/minus"
             android:textSize="50sp"
             />
         <Button
             android:id="@+id/multiplicar"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:text="*"
+            android:text="@string/multiplication"
             android:textSize="50sp"
             />
         <Button
             android:id="@+id/dividir"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:text="/"
+            android:text="@string/division"
             android:textSize="50sp"
             />
     </LinearLayout>
@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="00"
+        android:text="@string/default_result"
         android:textSize="120sp" />
 
 </LinearLayout>

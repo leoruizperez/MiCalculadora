@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,30 +36,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        if(num1.getText().toString().matches("") && num2.getText().toString().matches("")) {
+            Toast.makeText(this, R.string.error_value, Toast.LENGTH_SHORT).show();
+        }else{
+            String n1 = num1.getText().toString();
+            String n2 = num2.getText().toString();
 
-        String n1 = num1.getText().toString();
-        String n2 = num2.getText().toString();
+            int entero1 = Integer.parseInt(n1);
+            int entero2 = Integer.parseInt(n2);
+            int resp = 0;
 
-        int entero1=Integer.parseInt(n1);
-        int entero2 =Integer.parseInt(n2);
-        int resp=0;
+            switch (v.getId()) {
+                case R.id.sumar:
+                    resp = entero1 + entero2;
+                    break;
+                case R.id.restar:
+                    resp = entero1 - entero2;
+                    break;
+                case R.id.multiplicar:
+                    resp = entero1 * entero2;
+                    break;
+                case R.id.dividir:
+                    resp = entero1 / entero2;
+                    break;
+            }
 
-        switch (v.getId()){
-            case R.id.sumar:
-                resp=entero1+entero2;
-                break;
-            case R.id.restar:
-                resp=entero1-entero2;
-                break;
-            case R.id.multiplicar:
-                resp=entero1*entero2;
-                break;
-            case R.id.dividir:
-                resp=entero1/entero2;
-                break;
+            Resultado.setText("" + resp);
         }
-
-    Resultado.setText(""+resp);
-
     }
 }
