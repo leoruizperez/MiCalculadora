@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MiCalculadora</string>
-    <string name="error_value">Debe ingresar todos los números</string>
+    <string name="error_numbers_value">Debe ingresar los dos números</string>
+    <string name="error_division_value">No se puede divir por cero</string>
     <string name="number_1">Número 1</string>
     <string name="number_2">Número 2</string>
     <string name="default_result">00</string>
